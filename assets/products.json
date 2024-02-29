@@ -1,0 +1,680 @@
+[
+    {
+        "aderesos": [
+            {
+                "id": "1",
+                "nombre": "Catsup"
+            },
+            {
+                "id": "2",
+                "nombre": "Mayonesa"
+            },
+            {
+                "id": "3",
+                "nombre": "Mostaza"
+            }
+        ],
+        "id": 1,
+        "ingrePrep": "",
+        "nombre": "Hamburguesa Tradicional",
+        "pan": "Pan Blanco",
+        "precio": "50",
+        "preparacion": "tradicional",
+        "tipo": {
+            "id": "burguerP",
+            "nombre": "hamburguesa",
+            "url": "../public/img/menu/burguers/burgMex.png"
+        },
+        "urlImg": "../public/img/menu/burguers/burgMex.png",
+        "vegetales": [
+            {
+                "id": "1",
+                "nombre": "jitomate"
+            },
+            {
+                "id": "2",
+                "nombre": "cebolla"
+            },
+            {
+                "id": "3",
+                "nombre": "rajas"
+            }
+        ]
+    },
+    {
+        "aderesos": [
+            {
+                "id": "1",
+                "nombre": "Catsup"
+            },
+            {
+                "id": "2",
+                "nombre": "Mayonesa"
+            },
+            {
+                "id": "3",
+                "nombre": "Mostaza"
+            }
+        ],
+        "id": 2,
+        "ingrePrep": "Lonchas de tocino",
+        "nombre": "Hamburguesa con tocino",
+        "pan": "Pan Blanco",
+        "precio": "50",
+        "preparacion": "tocino",
+        "tipo": {
+            "id": "burguerP",
+            "nombre": "hamburguesa",
+            "url": "../public/img/menu/burguers/burgToci.png"
+        },
+        "urlImg": "../public/img/menu/burguers/burgToci.png",
+        "vegetales": [
+            {
+                "id": "1",
+                "nombre": "jitomate"
+            },
+            {
+                "id": "2",
+                "nombre": "cebolla"
+            },
+            {
+                "id": "3",
+                "nombre": "rajas"
+            }
+        ]
+    },
+    {
+        "aderesos": [
+            {
+                "id": "1",
+                "nombre": "Catsup"
+            },
+            {
+                "id": "2",
+                "nombre": "Mayonesa"
+            },
+            {
+                "id": "3",
+                "nombre": "Mostaza"
+            }
+        ],
+        "id": 3,
+        "ingrePrep": "Piña y jamón",
+        "nombre": "Hamburguesa hawaiana",
+        "pan": "Pan Blanco",
+        "precio": "50",
+        "preparacion": "hawaiana",
+        "tipo": {
+            "id": "burguerP",
+            "nombre": "hamburguesa",
+            "url": "../public/img/menu/burguers/burgMex.png"
+        },
+        "urlImg": "../public/img/menu/burguers/burgMex.png",
+        "vegetales": [
+            {
+                "id": "1",
+                "nombre": "jitomate"
+            },
+            {
+                "id": "2",
+                "nombre": "cebolla"
+            },
+            {
+                "id": "3",
+                "nombre": "rajas"
+            }
+        ]
+    },
+    {
+        "aderesos": [
+            {
+                "id": "1",
+                "nombre": "Catsup"
+            },
+            {
+                "id": "2",
+                "nombre": "Mayonesa"
+            },
+            {
+                "id": "3",
+                "nombre": "Mostaza"
+            }
+        ],
+        "id": 4,
+        "ingrePrep": "Champiñones con queso",
+        "nombre": "Hamburguesa con champiñones",
+        "pan": "Pan Blanco",
+        "precio": "50",
+        "preparacion": "champiñon",
+        "tipo": {
+            "id": "burguerP",
+            "nombre": "hamburguesa",
+            "url": "../public/img/menu/burguers/burgMex.png"
+        },
+        "urlImg": "../public/img/menu/burguers/burgMex.png",
+        "vegetales": [
+            {
+                "id": "1",
+                "nombre": "jitomate"
+            },
+            {
+                "id": "2",
+                "nombre": "cebolla"
+            },
+            {
+                "id": "3",
+                "nombre": "rajas"
+            }
+        ]
+    },
+    {
+        "aderesos": [
+            {
+                "id": "1",
+                "nombre": "Catsup"
+            },
+            {
+                "id": "2",
+                "nombre": "Mayonesa"
+            },
+            {
+                "id": "3",
+                "nombre": "Mostaza"
+            }
+        ],
+        "id": 5,
+        "ingrePrep": "Chorizo de la casa con queso y aguacate",
+        "nombre": "Hamburguesa Mexicana",
+        "pan": "Pan Blanco",
+        "precio": "50",
+        "preparacion": "mexicana",
+        "tipo": {
+            "id": "burguerP",
+            "nombre": "hamburguesa",
+            "url": "../public/img/menu/burguers/burgMex.png"
+        },
+        "urlImg": "../public/img/menu/burguers/burgMex.png",
+        "vegetales": [
+            {
+                "id": "1",
+                "nombre": "jitomate"
+            },
+            {
+                "id": "2",
+                "nombre": "cebolla"
+            },
+            {
+                "id": "3",
+                "nombre": "rajas"
+            }
+        ]
+    },
+    {
+        "aderesos": [
+            {
+                "id": "1",
+                "nombre": "Catsup"
+            },
+            {
+                "id": "2",
+                "nombre": "Mayonesa"
+            },
+            {
+                "id": "3",
+                "nombre": "Mostaza"
+            }
+        ],
+        "id": 6,
+        "ingrePrep": "Lonchas de tocino",
+        "nombre": "Hot Dog Tradicional",
+        "pan": "Media noche",
+        "precio": "30",
+        "preparacion": "tradicional",
+        "tipo": {
+            "id": "hotdogP",
+            "nombre": "hot dog",
+            "url": "../public/img/menu/hotdogs/hotdog.png"
+        },
+        "urlImg": "../public/img/menu/hotdogs/hotdog.png",
+        "vegetales": [
+            {
+                "id": "1",
+                "nombre": "jitomate"
+            },
+            {
+                "id": "2",
+                "nombre": "cebolla"
+            },
+            {
+                "id": "3",
+                "nombre": "rajas"
+            }
+        ]
+    },
+    {
+        "aderesos": [
+            {
+                "id": "1",
+                "nombre": "Catsup"
+            },
+            {
+                "id": "2",
+                "nombre": "Mayonesa"
+            },
+            {
+                "id": "3",
+                "nombre": "Mostaza"
+            }
+        ],
+        "id": 7,
+        "ingrePrep": "Queso, cebolla y jitomate",
+        "nombre": "Hot Dog Revolcado",
+        "pan": "Media noche",
+        "precio": "30",
+        "preparacion": "Revolcado",
+        "tipo": {
+            "id": "hotdogP",
+            "nombre": "hot dog",
+            "url": "../public/img/menu/hotdogs/hotdog.png"
+        },
+        "urlImg": "../public/img/menu/hotdogs/hotdog.png",
+        "vegetales": [
+            {
+                "id": "1",
+                "nombre": "jitomate"
+            },
+            {
+                "id": "2",
+                "nombre": "cebolla"
+            },
+            {
+                "id": "3",
+                "nombre": "rajas"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "ingrePrep": "Pollo desebrado",
+        "nombre": "Baguette con Pollo",
+        "pan": "Pan Baguette Integral",
+        "precio": "60",
+        "preparacion": "Pollo",
+        "tipo": {
+            "id": "bagP",
+            "nombre": "baguette",
+            "url": "../public/img/menu/baguettes/baguet.png"
+        },
+        "urlImg": "../public/img/menu/baguettes/baguet.png",
+        "vegetales": [
+            {
+                "id": "4",
+                "nombre": "aguacate"
+            },
+            {
+                "id": "5",
+                "nombre": "frijoles"
+            },
+            {
+                "id": "6",
+                "nombre": "lechuga"
+            },
+            {
+                "id": "3",
+                "nombre": "rajas"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "ingrePrep": "Pierna adobada de puerco",
+        "nombre": "Baguette Pierna Adobada",
+        "pan": "Pan Baguette Integral",
+        "precio": "60",
+        "preparacion": "Pierna adobada",
+        "tipo": {
+            "id": "bagP",
+            "nombre": "baguette",
+            "url": "../public/img/menu/baguettes/baguet.png"
+        },
+        "urlImg": "../public/img/menu/baguettes/baguet.png",
+        "vegetales": [
+            {
+                "id": "4",
+                "nombre": "aguacate"
+            },
+            {
+                "id": "5",
+                "nombre": "frijoles"
+            },
+            {
+                "id": "6",
+                "nombre": "lechuga"
+            },
+            {
+                "id": "3",
+                "nombre": "rajas"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "ingrePrep": "Cochinita Pibil",
+        "nombre": "Baguette de Cochinita Pibil",
+        "pan": "Pan Baguette Integral",
+        "precio": "60",
+        "preparacion": "Cochinita Pibil",
+        "tipo": {
+            "id": "bagP",
+            "nombre": "baguette",
+            "url": "../public/img/menu/baguettes/baguet.png"
+        },
+        "urlImg": "../public/img/menu/baguettes/baguet.png",
+        "vegetales": [
+            {
+                "id": "4",
+                "nombre": "aguacate"
+            },
+            {
+                "id": "5",
+                "nombre": "frijoles"
+            },
+            {
+                "id": "6",
+                "nombre": "lechuga"
+            },
+            {
+                "id": "3",
+                "nombre": "rajas"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "ingrePrep": "Milanesa empanizada",
+        "nombre": "Baguette de Milanesa",
+        "pan": "Pan Baguette Integral",
+        "precio": "60",
+        "preparacion": "Milanesa",
+        "tipo": {
+            "id": "bagP",
+            "nombre": "baguette",
+            "url": "../public/img/menu/baguettes/baguet.png"
+        },
+        "urlImg": "../public/img/menu/baguettes/baguet.png",
+        "vegetales": [
+            {
+                "id": "4",
+                "nombre": "aguacate"
+            },
+            {
+                "id": "5",
+                "nombre": "frijoles"
+            },
+            {
+                "id": "6",
+                "nombre": "lechuga"
+            },
+            {
+                "id": "3",
+                "nombre": "rajas"
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "ingrePrep": "Pollo desebrado",
+        "nombre": "Sandwich de Pollo",
+        "pan": "Pan Blanco",
+        "precio": "50",
+        "preparacion": "Pollo",
+        "tipo": {
+            "id": "sandP",
+            "nombre": "club shandwiches",
+            "url": "../public/img/menu/sandwiches/sandw.png"
+        },
+        "urlImg": "../public/img/menu/sandwiches/sandw.png",
+        "vegetales": [
+            {
+                "id": "4",
+                "nombre": "aguacate"
+            },
+            {
+                "id": "5",
+                "nombre": "frijoles"
+            },
+            {
+                "id": "6",
+                "nombre": "lechuga"
+            },
+            {
+                "id": "3",
+                "nombre": "rajas"
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "ingrePrep": "Pierna adobada de puerco",
+        "nombre": "Sandwich de Pierna Adobada",
+        "pan": "Pan Blanco",
+        "precio": "60",
+        "preparacion": "Pierna adobada",
+        "tipo": {
+            "id": "sandP",
+            "nombre": "club shandwiches",
+            "url": "../public/img/menu/sandwiches/sandw.png"
+        },
+        "urlImg": "../public/img/menu/sandwiches/sandw.png",
+        "vegetales": [
+            {
+                "id": "4",
+                "nombre": "aguacate"
+            },
+            {
+                "id": "5",
+                "nombre": "frijoles"
+            },
+            {
+                "id": "6",
+                "nombre": "lechuga"
+            },
+            {
+                "id": "3",
+                "nombre": "rajas"
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "ingrePrep": "Cochinita Pibil",
+        "nombre": "Sandwich de Cochinita Pibil",
+        "pan": "Pan Blanco",
+        "precio": "60",
+        "preparacion": "Cochinita Pibil",
+        "tipo": {
+            "id": "sandP",
+            "nombre": "club shandwiches",
+            "url": "../public/img/menu/sandwiches/sandw.png"
+        },
+        "urlImg": "../public/img/menu/sandwiches/sandw.png",
+        "vegetales": [
+            {
+                "id": "4",
+                "nombre": "aguacate"
+            },
+            {
+                "id": "5",
+                "nombre": "frijoles"
+            },
+            {
+                "id": "6",
+                "nombre": "lechuga"
+            },
+            {
+                "id": "3",
+                "nombre": "rajas"
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "ingrePrep": "Milanesa empanizada",
+        "nombre": "Sandwich de Milanesa",
+        "pan": "Pan Blanco",
+        "precio": "60",
+        "preparacion": "Milanesa",
+        "tipo": {
+            "id": "sandP",
+            "nombre": "club shandwiches",
+            "url": "../public/img/menu/sandwiches/sandw.png"
+        },
+        "urlImg": "../public/img/menu/sandwiches/sandw.png",
+        "vegetales": [
+            {
+                "id": "4",
+                "nombre": "aguacate"
+            },
+            {
+                "id": "5",
+                "nombre": "frijoles"
+            },
+            {
+                "id": "6",
+                "nombre": "lechuga"
+            },
+            {
+                "id": "3",
+                "nombre": "rajas"
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "ingrePrep": "Pollo desebrado",
+        "nombre": "Burrito de pollo",
+        "pan": "Tortilla de Harina",
+        "precio": "60",
+        "preparacion": "Pollo",
+        "tipo": {
+            "id": "burrP",
+            "nombre": "burrito",
+            "url": "../public/img/menu/burritos/hotGrand.png"
+        },
+        "urlImg": "../public/img/menu/burritos/hotGrand.png",
+        "vegetales": [
+            {
+                "id": "4",
+                "nombre": "aguacate"
+            },
+            {
+                "id": "5",
+                "nombre": "frijoles"
+            },
+            {
+                "id": "6",
+                "nombre": "lechuga"
+            },
+            {
+                "id": "3",
+                "nombre": "rajas"
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "ingrePrep": "Pierna adobada de puerco",
+        "nombre": "Burrito de Pierna Adobada",
+        "pan": "Tortilla de Harina",
+        "precio": "60",
+        "preparacion": "Pierna adobada",
+        "tipo": {
+            "id": "burrP",
+            "nombre": "burrito",
+            "url": "../public/img/menu/burritos/hotGrand.png"
+        },
+        "urlImg": "../public/img/menu/burritos/hotGrand.png",
+        "vegetales": [
+            {
+                "id": "4",
+                "nombre": "aguacate"
+            },
+            {
+                "id": "5",
+                "nombre": "frijoles"
+            },
+            {
+                "id": "6",
+                "nombre": "lechuga"
+            },
+            {
+                "id": "3",
+                "nombre": "rajas"
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "ingrePrep": "Cochinita Pibil",
+        "nombre": "Burrito de Cochinita Pibil",
+        "pan": "Tortilla de Harina",
+        "precio": "60",
+        "preparacion": "Cochinita Pibil",
+        "tipo": {
+            "id": "burrP",
+            "nombre": "burrito",
+            "url": "../public/img/menu/burritos/hotGrand.png"
+        },
+        "urlImg": "../public/img/menu/burritos/hotGrand.png",
+        "vegetales": [
+            {
+                "id": "4",
+                "nombre": "aguacate"
+            },
+            {
+                "id": "5",
+                "nombre": "frijoles"
+            },
+            {
+                "id": "6",
+                "nombre": "lechuga"
+            },
+            {
+                "id": "3",
+                "nombre": "rajas"
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "ingrePrep": "Milanesa empanizada",
+        "nombre": "Burrito de Milanesa",
+        "pan": "Tortilla de Harina",
+        "precio": "60",
+        "preparacion": "Milanesa",
+        "tipo": {
+            "id": "burrP",
+            "nombre": "burrito",
+            "url": "../public/img/menu/burritos/hotGrand.png"
+        },
+        "urlImg": "../public/img/menu/burritos/hotGrand.png",
+        "vegetales": [
+            {
+                "id": "4",
+                "nombre": "aguacate"
+            },
+            {
+                "id": "5",
+                "nombre": "frijoles"
+            },
+            {
+                "id": "6",
+                "nombre": "lechuga"
+            },
+            {
+                "id": "3",
+                "nombre": "rajas"
+            }
+        ]
+    }
+]
