@@ -4,7 +4,7 @@ export default class ProductManager {
 
     #products
     #path
-    static #ultimoIdEvento = 1
+    static #ultimoIdProduct = 1
 
     constructor(paths) {
         this.#path = paths;
@@ -16,8 +16,8 @@ export default class ProductManager {
     
     async getProductsFile() {
         try {
-            const usersFileContent = await fs.promises.readFile(this.#path, 'utf-8')
-            return JSON.parse(usersFileContent)
+            const productsFileContent = await fs.promises.readFile(this.#path, 'utf-8')
+            return JSON.parse(productsFileContent)
         }
         catch (err) {
             console.log(err);
@@ -31,32 +31,46 @@ export default class ProductManager {
     
     #getNuevoId() {
         if (this.#products.length === 0) {
-            return ProductManager.#ultimoIdEvento
+            return ProductManager.#ultimoIdProduct
         } else {
             const producId = this.#products[this.#products.length - 1].id
-            ProductManager.#ultimoIdEvento = producId + 1
-            return ProductManager.#ultimoIdEvento
+            ProductManager.#ultimoIdProduct = producId + 1
+            return ProductManager.#ultimoIdProduct
+        }
+    }
+
+    validaDatos(produc){
+        if((produc.ingrePrep === "" || !produc.ingrePrep) || 
+            (produc.nombre === "" || !produc.nombre) ||
+            (produc.pan === "" || !produc.pan) ||
+            (isNaN(produc.precio) || produc.precio < 0) ||
+            (produc.preparacion === "" || !produc.preparacion) ||
+            (!produc.tipo || produc.tipo === "") ||
+            (!produc.status || (produc.status != "true" && produc.status != "false") ) ||
+            (isNaN(produc.stock) ||  produc.stock < 0) ){
+            // console.log("Verifique que los campos esten coorectos o llenos");
+            throw new Error(`Verifique que los campos esten coorectos o llenos`)
         }
     }
 
 
-
-    async createProduct(title, description, price, thumbnail, code, stock) {
+    // async createProduct(title, description, price, thumbnail, code, stock) {
+    async createProduct(produc) {
+        // this.initialize()
+        this.#products = await this.getProductsFile();
 
 
         // valida campos
-        if (title === "" || description === "" || price === "" ||  price < 0 || thumbnail === "" || code === "" || stock === "") {
-            console.log("verifique que los campos esten coorectos o llenos");
-            return;
-        }
+        this.validaDatos(produc)
 
         //  Valida que el codigo no exista       
-        const valCode = this.#products.find(prod => prod.code === code);
-        if (valCode) {
-            console.error(`El code ${code} ya existe, favor poner un code nuevo`);
-            return;
-            // throw `Elllll code ${code} ya existe, favor poner un code nuevo`
-        }
+        // const valCode = this.#products.find(prod => prod.code === code);
+        // if (valCode) {
+        //     console.error(`El code ${code} ya existe, favor poner un code nuevo`);
+        //     return;
+        //     // throw `Elllll code ${code} ya existe, favor poner un code nuevo`
+        // }
+
         //  Valida que el id no exista para no se repita
         let newId = this.#getNuevoId()
         const valId = this.#products.find( prod => prod.id === newId);
@@ -65,19 +79,25 @@ export default class ProductManager {
         }
 
 
-        const product = {
-            id: newId,
-            title,
-            description,
-            price,
-            thumbnail,
-            code,
-            stock
-        }
+        // const product = {
+        //     id: newId,
+        //     title,
+        //     description,
+        //     price,
+        //     thumbnail,
+        //     code,
+        //     stock
+        // }
 
+        const product = {id: newId, ...produc }
+
+        
         this.#products.push(product);
-
+        
         await this.#updateFile();
+        
+        // console.log('productooooooooo', produc.stock);
+        return product
 
 
     }
@@ -87,45 +107,87 @@ export default class ProductManager {
     async findProductById(productId) {
         try {
             this.#products = await this.getProductsFile();
+            // console.log('this.#products', this.#products);
+            // console.log('this.#path', this.#path);
             const prodctIndex = this.#products.find(prod => prod.id === productId)
 
             if (!prodctIndex) {
-                throw 'The product does not exist'
+                // throw 'The product does not existe'
+                console.log('El producto a agregar no existe en el catalogo');
+                return [];
             }
 
             return prodctIndex;
 
         } catch (error) {
-            console.log(error);
-            return [{error: 'The product does not exist'}];
+            console.log(error, 'The product does not exist');
+            return [];
         }
     }
 
-    async updateProduct(productUpd) {
+    async updateProduct(id, prodUpd) {
         try {
-
-            const prodctIndex = this.#products.findIndex(prod => prod.id === productUpd.id)
+            // console.log('prodUpd', prodUpd);
+            this.#products = await this.getProductsFile();
+            const prodctIndex = this.#products.findIndex(prod => prod.id === id)
 
             if (prodctIndex < 0) {
-                throw 'Product id is not exist'
+                throw new Error('Product is not exist') 
             }
+            
+            console.log('prodctIndex',prodctIndex);
+            // console.log('productUpd',productUpd);
+            
+            // if (!productUpd != null) {
+            //     throw new Error('Product is not exist') 
+            // }
 
-            if (this.#products[prodctIndex].code != productUpd.code) {
-                if (!this.validateCode(productUpd.code)) {
-                    throw 'Product code can not update'
-                }
+            //valida code
+            // if (this.#products[prodctIndex].code != productUpd.code) {
+            //     if (!this.validateCode(productUpd.code)) {
+            //         throw 'Product code can not update'
+            //     }
+            // }
+            if(prodUpd.id != id){
+                throw new Error('Product id is not updated')
             }
+            
 
-            const productData = { ...this.#products[prodctIndex], ...productUpd }
+            const productData = { ...this.#products[prodctIndex], ...prodUpd }
             this.#products[prodctIndex] = productData
 
             await this.#updateFile();
 
+            console.log('productData', productData);
             return productData;
 
         } catch (exp) {
             console.log(exp);
             return [];
+        }
+    }
+
+    async deleteProduct(id) {
+        try {
+            this.#products = await this.getProductsFile();
+            const prodctIndex = this.#products.findIndex(prod => prod.id === id)
+            // console.log('prod index', prodctIndex);
+
+            if (prodctIndex < 0) {
+                throw 'Product id is not exist'
+            }
+
+            // const productData = { ...this.#products[prodctIndex], ...productUpd }
+            this.#products.splice(prodctIndex,1);
+            // this.#products[prodctIndex] = productData
+
+            await this.#updateFile();
+
+            // return productData;
+
+        } catch (exp) {
+            console.log(exp);
+            // return [];
         }
     }
 
@@ -142,37 +204,3 @@ export default class ProductManager {
         await fs.promises.writeFile(this.#path, JSON.stringify(this.#products, null, '\t'))
     }
 }
-
-
-// module.exports = ProductManager
-
-// //------ EJECUCION ------
-// const main = async () => {
-//     const manager = new ProductManager('./Products.json')
-//     await manager.initialize() // carga los productos desde el archivo
-    
-//     // console.log('all products \n', await manager.getProductsFile())//mostrar los productos desde el archivo
-    
-//     // await manager.createProduct("titulo4", "descripcion4", 35, "Sin imagen", "abc1", 10) // crear producto
-
-//     console.log('Find Product ', await manager.findProductById(10)); //encontrar producto
-
-//     //actualiza producto enviendo un elemento    
-//     // console.log('Product updated ', await manager.updateProduct(
-
-//     //     {
-//     //         id: 1,
-//     //         title: 'titulo1',
-//     //         description: 'descripcion1',
-//     //         price: 35,
-//     //         thumbnail: 'Sin imagen',
-//     //         code: 'abc1',
-//     //         stock: 10
-//     //     }
-
-//     // ));
-
-//     console.log('all products \n', await manager.getProductsFile())//mostrar los productos desde el archivo
-// }
-
-// main()

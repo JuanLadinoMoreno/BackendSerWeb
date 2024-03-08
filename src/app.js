@@ -1,31 +1,23 @@
 
  import express from 'express'
- import ProductManager from '../src/ProductManager.js'
+
+ import productsRouter from './routes/products.router.js'
+ import cartsRouter from './routes/carts.router.js'
+ 
+//  const productsRouter = require('./routes/products.router.js')
 
 
 const PORT = 8080;
 
-const expressServer = express();
+const app = express();
 
-const fileName = `./assets/Products.json`
-const productManager = new ProductManager(fileName);
+app.use(express.urlencoded({extended: 'true'}))
+app.use(express.json())
 
-expressServer.get('/products', async (req, res) => {
-    let limit = +req.query.limit
-    const products = await productManager.getProducts();
-    if (limit > 0) return res.json(products.slice(0, limit))
+app.use('/api/products', productsRouter)
+app.use('/api/carts', cartsRouter)
 
-    res.json(products)
-
-});
-expressServer.get('/products/:id', async (req, res) => {
-    const id = +req.params.id
-    const product = await productManager.findProductById(id)
-    res.json(product)
-});
-
-
-expressServer.listen(PORT, () => {
+app.listen(PORT, () => {
     console.log('Servidor preparado!!');
 });
 
