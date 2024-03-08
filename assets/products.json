@@ -638,35 +638,5 @@
 		],
 		"status": "true",
 		"stock": 0
-	},
-	{
-		"id": 20,
-		"ingrePrep": "Lengua de res marinada",
-		"nombre": "Baguette de Lengua de res555555",
-		"pan": "Pan Baguette Integral",
-		"precio": 60,
-		"preparacion": "Lengua de res",
-		"tipo": "bagP",
-		"thumbnail": "../public/img/menu/baguettes/baguet.png",
-		"vegetales": [
-			{
-				"id": "4",
-				"nombre": "aguacate"
-			},
-			{
-				"id": "5",
-				"nombre": "frijoles"
-			},
-			{
-				"id": "6",
-				"nombre": "lechuga"
-			},
-			{
-				"id": "3",
-				"nombre": "rajas"
-			}
-		],
-		"status": "true",
-		"stock": 10
 	}
 ]
